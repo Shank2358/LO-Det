@@ -1,15 +1,7 @@
 # LO-Det: Lightweight Oriented Object Detection in Remote Sensing Images 
 
 ## This is a PyTorch implementation of [LO-Det](https://ieeexplore.ieee.org/document/9390310/), YOLOv3+MobileNetv2, and YOLOv4.  
-
-代码这几天会分批陆续上传，因为有一些函数我重新命名和封装了（因为代码是基于更复杂的检测框架的，要从其中把LO-Det的部分单独拆出来）。模型权重字典的key我也需要重新转换一下。 
-目前是一个粗糙版本，因为想着尽快开源让大家用，还没来得及重构和优化，可能会有一些bug，遇到任何问题都可以在issues里面留言或者给我发邮件（邮件地址论文里有，一作那个就是），我会尽最大努力帮你们跑通实验和复现结果。 
-这个代码和我的另一个工作[NPMMR-Det](https://github.com/Shank2358/NPMMR-Det)用的是一个框架，大部分基础函数和用法都是一样的，有不明白的也可以看那个仓库。后续（有时间的话）会在那边仓库出教程和每行代码的注释。  
-关于在嵌入式设备上实验以及Nvidia TX2\Xavier的其他使用问题也欢迎交流。  
-最近事儿挺多，代码优化请允许我延迟一些时间（大概一个月之内），我会尽快完成。 
-有计划出一版LO-Detv2的魔改版，正在做实验。这个做完以后接下来的目标检测工作可能会逐渐淡化遥感方向了。
-
-如果觉得万一有点用，欢迎引用我们的论文。谢谢。  
+如果觉得万一有点用，欢迎引用我们的论文。谢谢。 
 @ARTICLE{9390310,
   author={Z. {Huang} and W. {Li} and X. -G. {Xia} and H. {Wang} and F. {Jie} and R. {Tao}},  
   journal={IEEE Transactions on Geoscience and Remote Sensing},   
@@ -19,6 +11,14 @@
   number={},  
   pages={1-15},  
   doi={10.1109/TGRS.2021.3067470}}  
+
+##解释
+代码这几天会分批陆续上传，因为有一些函数我重新命名和封装了（因为代码是基于更复杂的检测框架的，要从其中把LO-Det的部分单独拆出来）。模型权重字典的key我也需要重新转换一下。 
+目前是一个粗糙版本，因为想着尽快开源让大家用，还没来得及重构和优化，可能会有一些bug，遇到任何问题都可以在issues里面留言或者给我发邮件（邮件地址论文里有，一作那个就是），我会尽最大努力帮你们跑通实验和复现结果。 
+这个代码和我的另一个工作[NPMMR-Det](https://github.com/Shank2358/NPMMR-Det)用的是一个框架，大部分基础函数和用法都是一样的，有不明白的也可以看那个仓库。后续（有时间的话）会在那边仓库出教程和每行代码的注释。  
+关于在嵌入式设备上实验以及Nvidia TX2\Xavier的其他使用问题也欢迎交流。  
+最近事儿挺多，代码优化请允许我延迟一些时间（大概一个月之内），我会尽快完成。 
+有计划出一版LO-Detv2的魔改版，正在做实验。这个做完以后接下来的目标检测工作可能会逐渐淡化遥感方向了，对各方面都有点失望吧。
 
 # The High-precision version [NPMMR-Det](https://github.com/Shank2358/NPMMR-Det)
 
@@ -115,4 +115,4 @@ https://github.com/pprp/SimpleCVReproduction
 
 ## License
 This project is released under the [Apache 2.0 license](LICENSE).
-
+ 
