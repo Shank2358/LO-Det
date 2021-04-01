@@ -2,6 +2,9 @@
 
 ## This is a PyTorch implementation of [LO-Det](https://ieeexplore.ieee.org/document/9390310/), YOLOv3+MobileNetv2, and YOLOv4.  
 
+代码这几天会分批陆续上传，因为有一些函数我重新命名和封装了（因为代码是基于更复杂的检测框架的，要从其中把LO-Det的部分单独拆出来）。模型权重字典的key我也需要重新转换一下。目前是一个粗糙版本，因为想着尽快开源让大家用，还没来得及重构和优化，可能会有一些bug，遇到任何问题都可以在issues里面留言或者给我发邮件（邮件地址论文里有，一作那个就是），我会尽最大努力帮你们跑通实验和复现结果。关于在嵌入式设备上实验以及Nvidia TX2\Xavier的其他问题也欢迎交流。最近事儿挺多，代码优化请允许我延迟一些时间（大概一个月之内），我会尽快完成。 
+
+如果觉得万一有点用，欢迎引用我们的论文。谢谢。  
 @ARTICLE{9390310,
   author={Z. {Huang} and W. {Li} and X. -G. {Xia} and H. {Wang} and F. {Jie} and R. {Tao}},  
   journal={IEEE Transactions on Geoscience and Remote Sensing},   
@@ -82,12 +85,9 @@ python test.py
 Modify ./cfg/cfg_npmmr.py, please refer to the comments in this file for details
 
 ## Weights
-The pre-trained weights and trained models are available from [Google Drive](https://drive.google.com/drive/folders/1d9cT41TVg-Eae0CfMoPih8EgBMStZ4Jm?usp=sharing) or [Baidu Disk](https://pan.baidu.com/s/1FQD7nUmXKTIljmiMHeHslg) (password: gxzx)  
-Put them in. /weight folder
+They will soon be availabel. (网盘会员又到期了，等这个月领完低保再说吧)
 
 ## Notice
-The Lightweight versions (MobileNetv2, ShuffleNetv2, GhostNet...) will be available soon after our paper is published.  
-
 If you have any questions, please ask in issues.  
 If you find bugs, please let me know and I will debug them in time. Thank you.  
 I will do my best to help you run this program successfully and get results close to those reported in the paper.  
