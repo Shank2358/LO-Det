@@ -1,7 +1,9 @@
 # LO-Det: Lightweight Oriented Object Detection in Remote Sensing Images 
 
 ## This is a PyTorch implementation of [LO-Det](https://ieeexplore.ieee.org/document/9390310/), YOLOv3+MobileNetv2, and YOLOv4.  
+
 如果觉得万一有点用，欢迎引用我们的论文。谢谢。 
+
 @ARTICLE{9390310,
   author={Z. {Huang} and W. {Li} and X. -G. {Xia} and H. {Wang} and F. {Jie} and R. {Tao}},  
   journal={IEEE Transactions on Geoscience and Remote Sensing},   
