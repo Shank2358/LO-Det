@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from dropblock import DropBlock2D, LinearScheduler
-from model.layers.convolutions import Convolutional, Deformable_Convolutional
-from model.layers.shuffle_blocks import Shuffle_new, Shuffle_Cond_RFA, Shuffle_new_s
+from modelR.layers.convolutions import Convolutional, Deformable_Convolutional
+from modelR.layers.shuffle_blocks import Shuffle_new, Shuffle_Cond_RFA, Shuffle_new_s
 import config.cfg_lodet as cfg
 
 class Upsample(nn.Module):

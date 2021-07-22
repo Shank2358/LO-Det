@@ -6,8 +6,8 @@ from torch.utils.data import DataLoader
 from pycocotools.cocoeval import COCOeval
 import time
 from tqdm import tqdm
-from dataload.cocodataset import *
-from eval.evaluator import Evaluator
+from dataloadR.cocodataset import *
+from evalR.evaluator import Evaluator
 from utils.utils_coco import *
 from utils.visualize import *
 

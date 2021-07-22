@@ -9,7 +9,7 @@ import random
 import torch
 from torch.utils.data import Dataset
 
-import config.cfg_npmmr as cfg
+import config.cfg_lodet as cfg
 import dataloadR.augmentations as DataAug
 import utils.utils_basic as tools
 from PIL import Image

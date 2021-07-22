@@ -7,10 +7,10 @@ import dataloadR.datasets as data
 import utils.gpu as gpu
 from utils import cosine_lr_scheduler
 from utils.log import Logger
-from model.lodet import LODet
-from model.loss.loss import Loss
-from eval.evaluator import *
-from eval.coco_eval import COCOEvaluator
+from modelR.lodet import LODet
+from modelR.loss.loss import Loss
+from evalR.evaluator import *
+from evalR.coco_eval import COCOEvaluator
 from torch.cuda.amp import autocast as autocast
 
 class Trainer(object):

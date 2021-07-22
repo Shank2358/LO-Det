@@ -12,7 +12,7 @@ import logging
 from utils.utils_coco import *
 from utils.log import Logger
 import cv2
-from eval.coco_eval import COCOEvaluator
+from evalR.coco_eval import COCOEvaluator
 import torch.backends.cudnn as cudnn
 class Tester(object):
     def __init__(self, weight_path=None, gpu_id=0, visiual=None, eval=False):

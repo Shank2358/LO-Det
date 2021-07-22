@@ -2,7 +2,7 @@ import os
 from torch.utils.data import Dataset
 from pycocotools.coco import COCO
 
-import config.cfg_npmmr as cfg
+import config.cfg_lodet as cfg
 from utils.utils_coco import *
 
 class COCODataset(Dataset):
