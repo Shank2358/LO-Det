@@ -10,9 +10,8 @@ class MSigmoid_approx(nn.Module):
         return (torch.clamp(torch.sigmoid(input),0.011,1)-0.01)/(1-0.01)
 
 class DSC_Head(nn.Module):
-    def __init__(self, nC, anchors, stride, fact):
+    def __init__(self, nC, anchors, stride):
         super(DSC_Head, self).__init__()
-        self.fact = fact
         self.__anchors = anchors
         self.__nA = len(anchors)
         self.__nC = nC
