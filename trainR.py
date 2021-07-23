@@ -112,7 +112,7 @@ class Trainer(object):
 
             mloss = torch.zeros(4)
             mAP = 0
-            self.__save_model_weights1(epoch, mAP)
+            #self.__save_model_weights1(epoch, mAP)
             for i, (imgs, label_sbbox, label_mbbox, label_lbbox,
                     sbboxes, mbboxes, lbboxes)  in enumerate(self.train_dataloader):
 
