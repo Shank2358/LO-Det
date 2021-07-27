@@ -2,8 +2,7 @@ import sys
 sys.path.append("..")
 import torch.nn as nn
 from modelR.backbones.mobilenetv2 import MobilenetV2
-from modelR.necks.csa_drf_fpn import CSA_DRF_FPN
-from modelR.head.dsc_head import DSC_Head
+from modelR.necks.csa_drf_fpn_hbb import CSA_DRF_FPN
 from modelR.head.dsc_head_hbb import Ordinary_Head
 from utils.utils_basic import *
 
@@ -40,4 +39,12 @@ class LODet(nn.Module):
             p, p_d = list(zip(*out))
             return p, torch.cat(p_d, 0)
 
+if __name__ == '__main__':
 
+    net = LODet().cuda()
+
+    in_img = torch.randn(1, 3, 608, 608).cuda()
+    p, p_d = net(in_img)
+    print("Output Size of Each Head (Num_Classes: %d)" % cfg.DATA["NUM"])
+    for i in range(3):
+        print(p[i].shape)
