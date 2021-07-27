@@ -7,6 +7,7 @@ from modelR.head.dsc_head import DSC_Head
 from modelR.head.dsc_head_hbb import Ordinary_Head
 from utils.utils_basic import *
 
+
 class LODet(nn.Module):
     """
     Note ： int the __init__(), to define the modules should be in order, because of the weight file is order
@@ -19,11 +20,11 @@ class LODet(nn.Module):
         self.__backnone = MobilenetV2(weight_path=pre_weights, extract_list=["6", "13", "conv"])#"17"
         self.__neck = CSA_DRF_FPN(fileters_in=[1280, 96, 32])
         # small
-        self.__head_s = DSC_Head(nC=self.__nC, anchors=self.__anchors[0], stride=self.__strides[0])
+        self.__head_s = Ordinary_Head(nC=self.__nC, anchors=self.__anchors[0], stride=self.__strides[0])
         # medium
-        self.__head_m = DSC_Head(nC=self.__nC, anchors=self.__anchors[1], stride=self.__strides[1])
+        self.__head_m = Ordinary_Head(nC=self.__nC, anchors=self.__anchors[1], stride=self.__strides[1])
         # large
-        self.__head_l = DSC_Head(nC=self.__nC, anchors=self.__anchors[2], stride=self.__strides[2])
+        self.__head_l = Ordinary_Head(nC=self.__nC, anchors=self.__anchors[2], stride=self.__strides[2])
 
     def forward(self, x):
         out = []
