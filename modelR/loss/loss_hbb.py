@@ -23,7 +23,6 @@ class Loss(nn.Module):
         self.__iou_threshold_loss = iou_threshold_loss
         self.__strides = strides
         self.__scale_factor = cfg.SCALE_FACTOR
-        self.__scale_factor_a = cfg.SCALE_FACTOR_A
 
     def forward(self, p, p_d, label_sbbox, label_mbbox, label_lbbox, sbboxes, mbboxes, lbboxes):
         strides = self.__strides
