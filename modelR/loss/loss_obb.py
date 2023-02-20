@@ -26,17 +26,20 @@ class Loss(nn.Module):
 
     def forward(self, p, p_d, label_sbbox, label_mbbox, label_lbbox, sbboxes, mbboxes, lbboxes):
         strides = self.__strides
-        loss_s, loss_s_iou, loss_s_conf, loss_s_cls = self.__cal_loss_per_layer(p[0], p_d[0], label_sbbox,
+        loss_s, loss_s_iou, loss_s_conf, loss_s_cls, loss_s_a, loss_s_r, loss_s_s = self.__cal_loss_per_layer(p[0], p_d[0], label_sbbox,
                                                                sbboxes, strides[0])
-        loss_m, loss_m_iou, loss_m_conf, loss_m_cls = self.__cal_loss_per_layer(p[1], p_d[1], label_mbbox,
+        loss_m, loss_m_iou, loss_m_conf, loss_m_cls, loss_m_a, loss_m_r, loss_m_s = self.__cal_loss_per_layer(p[1], p_d[1], label_mbbox,
                                                                mbboxes, strides[1])
-        loss_l, loss_l_iou, loss_l_conf, loss_l_cls = self.__cal_loss_per_layer(p[2], p_d[2], label_lbbox,
+        loss_l, loss_l_iou, loss_l_conf, loss_l_cls, loss_l_a, loss_l_r, loss_l_s = self.__cal_loss_per_layer(p[2], p_d[2], label_lbbox,
                                                                lbboxes, strides[2])
         loss = loss_l + loss_m + loss_s
         loss_iou = loss_s_iou + loss_m_iou + loss_l_iou
         loss_conf = loss_s_conf + loss_m_conf + loss_l_conf
         loss_cls = loss_s_cls + loss_m_cls + loss_l_cls
-        return loss, loss_iou, loss_conf, loss_cls
+        loss_a = loss_s_a + loss_m_a + loss_l_a
+        loss_s = loss_s_s + loss_m_s + loss_l_s
+        loss_r = loss_s_r + loss_m_r + loss_l_r
+        return loss, loss_iou, loss_conf, loss_cls, loss_a, loss_r, loss_s
 
     def smooth_l1_loss(self, input, target, beta=1. / 9, size_average=True):
         n = torch.abs(input - target)
