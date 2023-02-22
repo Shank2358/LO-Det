@@ -96,7 +96,7 @@ python test.py
 Modify ./cfg/cfg_npmmr.py, please refer to the comments in this file for details
 
 ## Weights
-They will soon be availabel. (网盘会员又到期了，等这个月领完低保再说吧)
+（https://drive.google.com/drive/folders/1cj0IKZ6rSVQRnt27AWiae0mSKhlLRQgs?usp=share_link）
 
 ## Notice
 If you have any questions, please ask in issues.  
